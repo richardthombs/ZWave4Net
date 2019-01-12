@@ -123,7 +123,7 @@ namespace ZWave.CommandClasses
             await Set(parameter, (long)value, false, 0, cancellationToken);
         }
 
-        private async Task Set(byte parameter, long value, bool signed, byte size, CancellationToken cancellationToken)
+        public async Task Set(byte parameter, long value, bool signed, byte size, CancellationToken cancellationToken)
         {
             if (size == 0)
             {
